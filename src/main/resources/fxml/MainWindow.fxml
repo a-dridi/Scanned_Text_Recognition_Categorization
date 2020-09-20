@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainWindowView" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.adridi.scannedtextrecognitioncategorisation.MainWindowController">
+   <center>
+      <VBox prefHeight="620.0" prefWidth="1038.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="topButtons" prefHeight="52.0" prefWidth="774.0">
+               <children>
+                  <Label fx:id="languageOfScannedImageLabel" prefHeight="28.0" prefWidth="178.0" text="Label">
+                     <HBox.margin>
+                        <Insets left="15.0" right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="scannedImgLanguageComboBox" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets right="15.0" top="15.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="91.0" prefWidth="774.0">
+               <children>
+                  <Button fx:id="openFileButton" mnemonicParsing="false" onAction="#handleSelectOneImageFile" prefHeight="37.0" prefWidth="193.0" text="Button">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="applicationTitle" prefHeight="39.0" prefWidth="561.0" style="-fx-alignment: center;" text="Label" textAlignment="CENTER" textFill="#d65800">
+                     <HBox.margin>
+                        <Insets left="25.0" right="25.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="openFilesButton" mnemonicParsing="false" onAction="#handleSelectMultipleImageFile" prefHeight="37.0" prefWidth="193.0" text="Button">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="scannedDocumentsTable" prefHeight="420.0" prefWidth="727.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </TableView>
+            <Label fx:id="copyrightFooterLabel" prefHeight="17.0" prefWidth="737.0" text="Label" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
